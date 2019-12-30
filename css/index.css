@@ -298,7 +298,7 @@ header {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 .home-intro {
-  padding: 50vh 0;
+  padding: 40vh 0;
   background: gray url("https://pedrorevilla471578.invisionapp.com/assets/A_MGFjZjlkZDY2YjhlM2JmOcEgzm6H0TvNPq9df6s55U7MBlwFgrtWeMAX9RaTJucZrSx3dIe8ZyG4YRKNQXBGSsgWBKezE4yBXjAnxEDfkTx8JGAjaqsLnzwk8jyaVmQo");
   background-size: cover;
   background-blend-mode: multiply;
@@ -342,6 +342,10 @@ header {
 }
 * {
   box-sizing: border-box;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 .gallery-image {
   padding: 20px;
