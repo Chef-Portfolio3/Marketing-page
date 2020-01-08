@@ -382,12 +382,12 @@ h2 {
   background-size: 100% 100%;
 }
 .gallery-image {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 70%;
-  margin: 1% 15% 15% 15%;
+  margin: 1% 15% 10% 15%;
   background-color: moccasin;
 }
 .gallery-image .img-box {
@@ -440,6 +440,18 @@ h2 {
 }
 .gallery-image .opacity-low {
   opacity: 0.5;
+}
+.chef-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.chef-section .chef {
+  width: 30%;
+  height: 20%;
+}
+.chef-section .chef h2 {
+  padding-top: 2%;
 }
 /*
 .search-bar {
