@@ -325,9 +325,10 @@ header {
 }
 h2 {
   font-family: 'Segoe UI';
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
+  background-color: white;
 }
 .home-about {
   align-items: center;
@@ -365,7 +366,7 @@ h2 {
   font-style: italic;
   border-radius: 50%;
   padding-top: 3%;
-  margin: 1% 1% 2% 1%;
+  margin: 1% 1% 0% 1%;
   border: 1px solid black;
   width: 9%;
   height: 160px;
@@ -387,8 +388,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   width: 70%;
-  margin: 1% 15% 10% 15%;
-  background-color: moccasin;
+  margin: 0% 15% 10% 15%;
 }
 .gallery-image .img-box {
   box-sizing: content-box;
@@ -441,17 +441,36 @@ h2 {
 .gallery-image .opacity-low {
   opacity: 0.5;
 }
-.chef-section {
+.row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.chef-section .chef {
-  width: 30%;
-  height: 20%;
+.row .column {
+  width: 20%;
+  margin: 2%;
 }
-.chef-section .chef h2 {
-  padding-top: 2%;
+.row .column .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.row .column .card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover {
+  background-color: #555;
 }
 /*
 .search-bar {
