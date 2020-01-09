@@ -3,19 +3,21 @@
     box-sizing: border-box;
   }
 
+  
   h2 {
+
+      font-size: 3rem;
+  }
+  
+
+  .tittle {
 
     font-family: 'Segoe UI';
     font-size: 3rem;
     text-align: center;
     margin-top: 2%;
-    background-color: white;
-    border-bottom: 1px solid black;
-  }
-
-  .tittle {
-
-     border-bottom: 1px solid black; 
+    text-decoration: underline;
+    //background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   
   }
 
@@ -200,12 +202,16 @@
 //Chef gallery section
 
 
+
+@media @desktop {
 .row {
 
   display: flex;
   
   justify-content: center;
   flex-wrap: wrap;
+  background-color: whitesmoke;
+
   
 
   .column {
@@ -230,7 +236,10 @@
 
         }
       }
+
   }
+
+  
 }
 
 .button {
@@ -247,4 +256,6 @@
     &:hover {
         background-color: #555;
     }
+}
+
 }

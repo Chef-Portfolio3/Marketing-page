@@ -320,19 +320,53 @@ header {
 .from-right {
   grid-column: 0.75;
 }
+footer {
+  align-items: center;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1498522271744-cdd435c13f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1354&q=80");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid gray;
+}
+.foot-main {
+  display: flex;
+  justify-content: space-around;
+}
+.foot-main .foot {
+  width: 15%;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  font-family: 'Segoe UI';
+  line-height: 1.6;
+}
+.foot-main .foot h3 {
+  text-decoration: underline;
+}
+.foot-main .foot a {
+  color: black;
+  text-decoration: none;
+}
+.foot-main .icons {
+  color: black;
+  font-size: 3rem;
+  text-decoration: none;
+}
 * {
   box-sizing: border-box;
 }
 h2 {
+  font-size: 3rem;
+}
+.tittle {
   font-family: 'Segoe UI';
   font-size: 3rem;
   text-align: center;
   margin-top: 2%;
-  background-color: white;
-  border-bottom: 1px solid black;
-}
-.tittle {
-  border-bottom: 1px solid black;
+  text-decoration: underline;
 }
 .home-about {
   align-items: center;
@@ -445,36 +479,39 @@ h2 {
 .gallery-image .opacity-low {
   opacity: 0.5;
 }
-.row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.row .column {
-  width: 20%;
-  margin: 2%;
-}
-.row .column .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.row .column .card img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-.button:hover {
-  background-color: #555;
+@media (min-width:900px) {
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+  }
+  .row .column {
+    width: 20%;
+    margin: 2%;
+  }
+  .row .column .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .row .column .card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  .button:hover {
+    background-color: #555;
+  }
 }
 /*
 .search-bar {
