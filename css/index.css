@@ -320,6 +320,44 @@ header {
 .from-right {
   grid-column: 0.75;
 }
+footer {
+  align-items: center;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1498522271744-cdd435c13f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1354&q=80");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid gray;
+}
+.foot-main {
+  display: flex;
+  justify-content: space-around;
+}
+.foot-main .foot {
+  width: 15%;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  font-family: 'Segoe UI';
+  line-height: 1.6;
+}
+.foot-main .foot h3 {
+  text-decoration: underline;
+}
+.foot-main .foot a {
+  color: black;
+  text-decoration: none;
+}
+.foot-main .foot a:hover {
+  text-decoration: underline;
+}
+.foot-main .icons a {
+  color: black;
+  font-size: 3rem;
+  text-decoration: none;
+}
 * {
   box-sizing: border-box;
 }
@@ -328,11 +366,13 @@ h2 {
   font-size: 3rem;
   text-align: center;
   margin-top: 2%;
-  background-color: white;
-  border-bottom: 2px solid black;
 }
 .tittle {
-  border-bottom: 1px solid black;
+  font-family: 'Segoe UI';
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2%;
+  text-decoration: underline;
 }
 .home-about {
   align-items: center;
@@ -364,6 +404,12 @@ h2 {
   display: flex;
   justify-content: center;
 }
+@media (max-width:900px) {
+  .categories {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .categories .round {
   text-align: center;
   color: black;
@@ -377,14 +423,38 @@ h2 {
   text-decoration: none;
   font-family: 'Segoe UI';
   font-size: 2rem;
-  background-image: url("../images/pasta-icon.png");
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   background-repeat: no-repeat;
   background-size: 100% 0em;
   background-position: 0 100%;
   transition: background-size 0.25s ease-in;
 }
+@media (max-width:900px) {
+  .categories .round {
+    width: 100%;
+    height: 20px;
+    border-radius: 0%;
+    margin: 0%;
+    border: none;
+    background: none;
+    margin-bottom: 2%;
+  }
+}
 .categories .round:hover {
   background-size: 100% 100%;
+}
+@media (max-width:900px) {
+  .categories .round:hover {
+    background: none;
+  }
+}
+.band {
+  background-image: url("../images/spices.jpg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .gallery-image {
   padding: 20px 20px 0px 20px;
@@ -447,20 +517,39 @@ h2 {
 }
 .row {
   display: flex;
+  border-top: 1px solid black;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: whitesmoke;
+  padding: 2%;
+  margin-top: 1%;
+}
+@media (max-width:900px) {
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .row .column {
   width: 20%;
   margin: 2%;
 }
+@media (max-width:900px) {
+  .row .column {
+    width: 100%;
+  }
+}
 .row .column .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .row .column .card img {
+  filter: grayscale(100%);
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
+}
+.row .column .card img:hover {
+  filter: grayscale(0);
 }
 .button {
   border: none;
@@ -475,6 +564,21 @@ h2 {
 }
 .button:hover {
   background-color: #555;
+}
+.review {
+  padding-top: 7%;
+  height: 400px;
+  background-color: lightslategrey;
+}
+.review p {
+  font-size: 3rem;
+  font-style: oblique;
+  text-align: center;
+  color: whitesmoke;
+}
+.review #name {
+  margin-right: 5%;
+  text-align: right;
 }
 /*
 .search-bar {
