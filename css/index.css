@@ -153,35 +153,6 @@ p {
 .bg {
   margin-left: 15%;
 }
-/*ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.5;
-  
-  li {
-    float: left;
-  
-         a {
-         display: block;
-         color: white;
-         text-align: center;
-         padding: 14px 16px;
-         text-decoration: none;
-         font-size: 20px;
-         
-            &:hover:not(.active) {
-            background-color: #111;
-            }
-         }
-    
-    }
-}*/
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
@@ -200,132 +171,413 @@ p {
   font-weight: 700;
   src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
-h1 {
-  font-size: 200px;
-  opacity: 0.5;
+/*Disabled desktop menu*/
+/*Re-enabled in media query*/
+.main-nav {
+  display: none;
 }
-.Chefs-Recipes {
-  font-size: 50px;
-  opacity: 0.5;
+.account {
+  display: none;
 }
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
+#wrapper {
+  margin-left: 7.5rem;
 }
-.site-logo {
-  font-weight: 900;
-  font-size: 0.8rem;
-  color: var(--text);
-  text-decoration: none;
+.main-name-2 {
+  display: none;
 }
-header {
-  --text: #F4F4F4;
-  --text-inverse: #333;
-  --background: transparent;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+.about {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  font-size: 3rem;
+  color: green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about:hover {
+  background-size: 90%;
+  color: white;
+}
+/*Side bar*/
+.sidebar {
+  margin-top: -2rem;
+  width: 6rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 3em;
-  transition: background 250ms ease-in;
-  background: var(--background);
-  color: var(--text);
+  z-index: 2;
+}
+/*Hamburger menu*/
+.menu-burger {
+  margin-top: 3rem;
+  cursor: pointer;
   position: fixed;
 }
-.nav__list {
+.bar {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: 0.6rem;
+  margin-left: 2px;
+}
+/*Social Icons*/
+.social-icons {
   list-style: none;
-  margin: 0;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 25rem;
+}
+.social-icons .social-link {
+  font-size: 2rem;
+  color: #777;
+  transition: color 0.3s;
+}
+.social-icons .social-link:hover {
+  color: #de8886;
+}
+.logo-2 {
+  margin-top: -25rem;
+}
+.navigation-search {
+  position: relative;
+}
+/*Navigation search*/
+.navigation {
+  width: 17rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: -20rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  outline: none;
+  border: 2px solid green;
+  border-radius: 10rem;
+  transition: background-color 0.3s;
+}
+.navigation:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navigation-btn {
+  border: none;
+  background-color: transparent;
+  color: green;
+  font-size: 1.7rem;
+  position: absolute;
+  top: -19rem;
+  right: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+/* Menu naviation*/
+.main-nav-menu {
+  position: fixed;
+  left: -18.5rem;
+  margin-top: -1.9rem;
+  width: 25.5rem;
+  height: 100%;
+  background: url(../images/rice.jpg) gray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
+}
+.heading {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: underline;
+  margin-top: -70%;
+  font-size: 3.5rem;
+}
+ul {
+  margin-top: -40rem;
+}
+li {
+  margin-bottom: 14%;
+}
+.nav-list-menu {
+  list-style: none;
   padding: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 2px 2px 4px #4b4b4b;
 }
-.nav__link {
-  --spacing: 1em;
+.nav-link-menu {
+  color: darkgreen;
+  font-size: 2rem;
+  font-weight: 400;
   text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  padding: calc(var(--spacing) / 2) var(--spacing);
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  transition: color 0.5s;
 }
-.nav__link:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: var(--spacing);
-  right: var(--spacing);
-  height: 2px;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  transition: -webkit-transform 150ms ease-in-out;
-  transition: transform 150ms ease-in-out;
-  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+.nav-link-menu:hover {
+  color: white;
 }
-.nav__link:hover::after {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+.bar-1,
+.bar-3 {
+  transition: all 0.4s;
 }
-.nav__link--btn {
-  border: 1.5px solid currentColor;
-  border-radius: 2em;
-  margin-left: 1em;
-  transition: background 250ms ease-in-out;
-  letter-spacing: 1px;
-  padding: 0.75em 1.5em;
+.checkbox:checked ~ .main-nav-menu {
+  left: 3.5rem;
 }
-.nav__link--btn:hover {
-  background: var(--text);
-  color: var(--text-inverse);
-  border-color: var(--text);
+.checkbox:checked ~ .sidebar .bar-1 {
+  transform: rotate(-405deg) translate(-5px, 6px);
 }
-/* .nav__link--btn::after {
-  display: none;*/
-.nav__link--btn--highlight {
-  background: limegreen;
-  border-color: limegreen;
-  color: #333;
+.checkbox:checked ~ .sidebar .bar-2 {
+  opacity: 0;
 }
-.nav__link--btn--highlight:hover {
-  background: var(--text);
-  border-color: var(--text);
+.checkbox:checked ~ .sidebar .bar-3 {
+  transform: rotate(405deg) translate(-5px, -6px);
 }
-.nav-scrolled {
-  --text: #333;
-  --text-inverse: #F4F4F4;
-  --background: #F4F4F4;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+/*Sidebar Menu naviation ENDED*/
+/*Logo*/
+.logo {
+  display: none;
 }
-.home-intro {
-  padding: 7% 20% 20% 20%;
+/*Pasta image on header*/
+.main-name {
+  padding: 10vh 0;
   background: gray url("../images/pasta.jpg");
   background-size: cover;
   background-blend-mode: multiply;
   color: white;
-  text-align: center;
-  background-attachment: fixed;
+  height: 50%;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: -4rem;
 }
-.columns {
+/*Line under pasta image*/
+hr {
+  margin: 20rem 1rem 5rem 0;
+}
+/*Main name displayed*/
+.label-2 {
+  margin-top: -20rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
-.col + .col {
-  margin-left: 1.5em;
+/*Page name*/
+h1 {
+  padding: -10rem 0 5rem 0;
+  font-size: 8rem;
+  opacity: 0.5;
+  text-decoration: underline;
+  margin-top: 20rem;
 }
-.from-left {
-  grid-column: 0.66666667;
+.chefs {
+  font-size: 3rem;
+  opacity: 0.7;
 }
-.from-right {
-  grid-column: 0.75;
+.home-about-2 {
+  padding: 5vh;
+  background: gray url("../images/Prepear.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-color: #dbd5d5;
+  box-shadow: 5px 10px 8px #888888;
+  margin: 10%;
+  padding: 10%;
+  border-radius: 1rem;
+}
+.home-about-2 .p1-2 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 8% 15% 12% 15%;
+  font-family: 'Segoe UI';
+  color: white;
+  opacity: 100%;
+}
+/*Media query*/
+@media (min-width: 900px) {
+  .menu-nav {
+    display: none;
+  }
+  #wrapper {
+    margin-left: -3rem;
+  }
+  /*Navigation*/
+  .account {
+    display: flex;
+  }
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .main-nav {
+    display: flex;
+  }
+  .navigation-search {
+    position: relative;
+  }
+  /*Navigation search*/
+  .navigation {
+    width: 17rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    outline: none;
+    border: 2px solid green;
+    border-radius: 10rem;
+    transition: background-color 0.3s;
+  }
+  .navigation:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .navigation-btn {
+    border: none;
+    background-color: transparent;
+    color: green;
+    font-size: 1.7rem;
+    position: absolute;
+    margin: 1px;
+    cursor: pointer;
+    outline: none;
+  }
+  .nav-link {
+    --spacing: 1em;
+    /* <---- */
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+  }
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 2px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  }
+  .nav-link:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  .nav-btn {
+    border: 1.5px solid currentColor;
+    border-radius: 2em;
+    margin-left: 1em;
+    transition: background 250ms ease-in-out;
+    letter-spacing: 1px;
+    padding: 0.75em 1.5em;
+  }
+  .nav-btn:hover {
+    background: var(--text);
+    color: var(--text-inverse);
+    border-color: var(--text);
+  }
+  .nav-btn::after {
+    display: none;
+  }
+  .nav-btn-highlight {
+    background: limegreen;
+    border-color: limegreen;
+    color: #333;
+  }
+  .nav-btn-highlight:hover {
+    background: var(--text);
+    border-color: var(--text);
+  }
+  .nav-scrolled {
+    --text: #333;
+    --text-inverse: #f4f4f4;
+    --background: #f4f4f4;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  }
+  /*Main header image and nav*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 2em 3em;
+    --text: #f4f4f4;
+    /* <---- */
+    --text-inverse: #333;
+    /* <---- */
+    --background: transparent;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+  }
+  /*Line under pasta image*/
+  hr {
+    margin-left: 2rem;
+  }
+  /*Image and page name*/
+  .main-name {
+    padding: 8vh 0;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /*Page name*/
+  h1 {
+    padding: -10rem 0 5rem 0;
+    font-size: 150px;
+    opacity: 0.5;
+    text-decoration: underline;
+  }
+  .chefs {
+    font-size: 4rem;
+    opacity: 0.7;
+  }
+  /*Logo*/
+  .logo {
+    display: flex;
+    background: white;
+    border-radius: 50%;
+    padding: 12px;
+    opacity: 0.7;
+  }
 }
 footer {
   align-items: center;
@@ -338,7 +590,7 @@ footer {
   background-size: cover;
   border-top: 1px solid gray;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   footer {
     position: fixed;
     height: 300px;
@@ -354,7 +606,7 @@ footer {
   color: black;
   text-align: center;
   font-family: 'Segoe UI';
-  line-height: 1.6;
+  margin-top: 5%;
 }
 .foot-main .foot h3 {
   text-decoration: underline;
@@ -366,19 +618,19 @@ footer {
 .foot-main .foot a:hover {
   text-decoration: underline;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .foot-main .foot {
     display: none;
     height: 200px;
   }
 }
+.foot-main .icons {
+  margin-top: 5%;
+}
 .foot-main .icons a {
   color: black;
   font-size: 3rem;
   text-decoration: none;
-}
-* {
-  box-sizing: border-box;
 }
 h2 {
   font-family: 'Segoe UI';
@@ -393,6 +645,11 @@ h2 {
   margin-top: 2%;
   text-decoration: underline;
 }
+@media (max-width:500px) {
+  .tittle {
+    text-align: center;
+  }
+}
 .home-about {
   align-items: center;
   background-image: url("../images/cheftopiaBig.jpg");
@@ -402,7 +659,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .home-about {
     height: 250px;
     width: 100%;
@@ -415,7 +672,7 @@ h2 {
   font-family: 'Segoe UI';
   color: slategray;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .home-about .p1 {
     padding: 10% 0% 0% 0%;
     text-align: center;
@@ -437,7 +694,7 @@ h2 {
   display: flex;
   justify-content: center;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .categories {
     flex-direction: column;
     width: 100%;
@@ -451,8 +708,8 @@ h2 {
   padding-top: 3%;
   margin: 1% 1% 0% 1%;
   border: 1px solid black;
-  width: 9%;
-  height: 160px;
+  width: 10%;
+  height: 130px;
   text-decoration: none;
   font-family: 'Segoe UI';
   font-size: 2rem;
@@ -462,7 +719,7 @@ h2 {
   background-position: 0 100%;
   transition: background-size 0.25s ease-in;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .categories .round {
     width: 100%;
     height: 20px;
@@ -476,7 +733,7 @@ h2 {
 .categories .round:hover {
   background-size: 100% 100%;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .categories .round:hover {
     background: none;
   }
@@ -489,7 +746,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .band {
     display: none;
   }
@@ -502,10 +759,12 @@ h2 {
   width: 70%;
   margin: 0% 15% 10% 15%;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .gallery-image {
-    margin: 0%;
-    justify-content: left;
+    margin-left: 10%;
+    margin-right: 0%;
+    padding: 0%;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
   }
@@ -520,9 +779,9 @@ h2 {
   position: relative;
   background-color: white;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .gallery-image .img-box {
-    width: 100%;
+    width: 80%;
   }
 }
 .gallery-image .img-box img {
@@ -530,6 +789,11 @@ h2 {
   width: 350px;
   transform: scale(1);
   transition: transform 0.4s ease;
+}
+@media (max-width:500px) {
+  .gallery-image .img-box img {
+    width: 100%;
+  }
 }
 .gallery-image .img-box .transparent-box {
   height: 250px;
@@ -539,6 +803,11 @@ h2 {
   top: 0;
   left: 0;
   transition: background-color 0.3s ease;
+}
+@media (max-width:500px) {
+  .gallery-image .img-box .transparent-box {
+    width: 100%;
+  }
 }
 .gallery-image .img-box .transparent-box .caption {
   position: absolute;
@@ -575,7 +844,7 @@ h2 {
   padding: 2%;
   margin-top: 1%;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .row {
     flex-direction: column;
     width: 100%;
@@ -585,7 +854,7 @@ h2 {
   width: 20%;
   margin: 2%;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .row .column {
     width: 100%;
   }
@@ -618,10 +887,10 @@ h2 {
 }
 .review {
   padding-top: 7%;
-  height: 400px;
+  height: 300px;
   background-color: lightslategrey;
 }
-@media (max-width:900px) {
+@media (max-width:500px) {
   .review {
     margin-top: 10%;
     font-size: 2rem;

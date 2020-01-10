@@ -21,50 +21,120 @@
   <![endif]-->
 </head>
 
-<header>
-  <!-- Navigation -->
-  <!--Logo nav-->
-  <div class="logo">
-    <a href="#" class="site-logo" aria-label="homepage"><img src="img/icon-2.png" alt="logo"></a>
-   </div>
-   <!--Main naviagation-->
-   <nav class="main-nav">
-    <ul class="nav__list">
-     <li class="nav__list-item">
-      <a href="#" class="nav__link">Home</a>
-     </li>
-     <li class="nav__list-item">
-      <a href="#" class="nav__link">Recipes</a>
-     </li>
-     <li class="nav__list-item">
-      <a href="#" class="nav__link">Chefs</a>
-     </li>
-     <li class="nav__list-item">
-      <a href="#" class="nav__link">About us</a>
-     </li>
-     <li class="nav__list-item"><a href="#" class="nav__link">Blog</a></li>
-    </ul>
-   </nav>
-   <!--Account naviagation-->
-   <nav class="account">
-    <ul class="nav__list">
-     <li class="nav__list-item">
-      <a class="nav__link nav__link--btn" href="#">Login</a>
-     </li>
-     <li class="nav__list-item">
-      <a class="nav__link nav__link--btn nav__link--btn--highlight" href="#">Join</a>
-     </li>
-    </ul>
-   </nav>
- </header>
+<!-- Main menu nav -->
+<div class="menu-nav">
+  <input type="checkbox" class="checkbox" id="click">
 
- <main>
-  <!--Name in middle-->
-  <section class="home-intro">
-   <h1>ChefTopia</h1>
-   <div class="Chefs-Recipes">
-    <p>Chefs and Recipes</p>
-   </div>
+  <!-- Side bar-->
+  <div class="sidebar">
+    <label for="click">
+      <!-- Hamburger menu -->
+      <div class="menu-burger">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+      </div>
+      <ul class="social-icons">
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      </ul>
+  </div>
+  </label>
+  <!-- END of hamburger menu -->
+
+  <!-- Nav Start -->
+  <nav class="main-nav-menu">
+
+    <div class="logo-2">
+      <a href="index.html"><img src="/images/icon-2.png" alt="icon logo"></a>
+    </div>
+
+    <!-- search Icon -->
+    <form class="navigation-search">
+      <input type="text" class="navigation" placeholder="Search...">
+      <button class="navigation-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+
+    <ul class="nav-list-menu">
+      <li class="nav-item-menu">
+        <a href="index.html" class="nav-link-menu">Home</a>
+      </li>
+      <li class="nav-item-menu">
+        <a href="#" class="nav-link-menu">Recipes</a>
+      </li>
+      <li class="nav-item-menu">
+        <a href="#" class="nav-link-menu">Chefs</a>
+      </li>
+      <li class="nav-item-menu">
+        <a href="about.html" class="nav-link-menu">About Us</a>
+      </li>
+      <li class="nav-item-menu">
+        <a href="#" class="nav-link-menu">Blog</a>
+      </li>
+
+      <!--Account Nav Start -->
+      <li class="nav-item-menu">
+        <a href="#" class="nav-link-menu nav-btn-menu">Login</a>
+      </li>
+      <li class="nav-item-menu">
+        <a href="#" class="nav-link-menu nav-btn-menu">Join</a>
+      </li>
+    </ul>
+
+  </nav>
+</div>
+<!-- END of menu-nav -->
+
+
+<header>
+  <!--Logo nav-->
+
+  <div class="logo">
+    <a href="index.html"><img src="../images/icon-2.png" alt="icon logo"></a>
+  </div>
+  <!-- Main Navigation -->
+  <!-- NOT THAT FOR NAVIATION I ADDED MULTIPLE CLASSES WHICH TAKES THE ATTRIBULES OF THE CSS STYLING ACCORDINGLY -->
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Recipes</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Chefs</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- search Icon -->
+  <form class="navigation-search">
+    <input type="text" class="navigation" placeholder="Search...">
+    <button class="navigation-btn">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+
+  <!-- Account Navigation -->
+  <nav class="account">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#" class="nav-link nav-btn">Login</a></li>
+      <li class="nav-item"><a href="#" class="nav-link nav-btn nav-btn-highlight">Join</a></li>
+    </ul>
+  </nav>
+
+</header>
+<!-- wraps whole page -->
+<div id="wrapper">
+  <!--Name of page-->
+  <section class="main-name">
+    <div class="topia">
+      <h1>ChefTopia</h1>
+    </div>
+
+    <div class="Chefs-Recipes-1">
+      <p class="chefs">Chefs and Recipes</p>
+    </div>
   </section>
   <!--Content under picture-->
   <div class="home-about">
@@ -416,6 +486,7 @@
   
 
   <footer class="foot-main">
+    
 
     <ul class="foot">
 
