@@ -252,6 +252,7 @@ p {
 }
 /*Navigation search*/
 .navigation {
+  margin-bottom: 5rem;
   width: 17rem;
   padding: 1rem 2rem;
   display: flex;
