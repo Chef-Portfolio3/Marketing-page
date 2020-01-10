@@ -367,6 +367,9 @@ li {
   margin-bottom: 5rem;
   margin-top: -4rem;
 }
+.main-name h1 {
+  font-size: 6rem;
+}
 /*Line under pasta image*/
 hr {
   margin: 20rem 1rem 5rem 0;
