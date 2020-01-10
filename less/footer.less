@@ -3,12 +3,15 @@ footer {
     align-items: center;
     width: 100%;
     background-image: url("https://images.unsplash.com/photo-1498522271744-cdd435c13f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1354&q=80");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   .parallex();
     border-top: 1px solid gray;
+
+
+    @media @mobile {
+
+        position: fixed;
+        height: 300px;
+     }
 }
 
 
@@ -17,6 +20,8 @@ footer {
 
     display: flex;
     justify-content: space-around;
+
+   
    
 
     .foot {
@@ -43,6 +48,12 @@ footer {
                 text-decoration: underline;
             }
         }
+
+        @media @mobile {
+
+            display: none;
+            height: 200px;
+         }
 
         
     }

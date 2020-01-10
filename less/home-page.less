@@ -32,12 +32,14 @@
     align-items: center;
     background-image: url("../images/cheftopiaBig.jpg");
 // Background Parallex
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    .parallex();
 // Background Parallex
+
+      @media @mobile {
+
+        height: 250px;
+        width: 100%;
+     }
   
     .p1 {
   
@@ -46,6 +48,14 @@
       padding: 5% 30% 5% 30%;
       font-family: 'Segoe UI';
       color: slategray;
+
+      @media @mobile {
+
+        padding: 10% 0% 0% 0%;
+        text-align: center;
+        font-size: 1.5rem;
+        width: 100%;
+     }
       
   
   
@@ -136,11 +146,12 @@
 
     background-image: url("../images/spices.jpg");
 // Background Parallex
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    .parallex();
+
+    @media @mobile {
+
+      display: none;
+   }
   }
   
   
@@ -161,7 +172,15 @@
     justify-content: center;
     width: 70%;
     margin: 0% 15% 10% 15%;
-    //background-color: moccasin;
+     
+
+    @media @mobile {
+
+      margin: 0%;
+      justify-content: left;
+      flex-direction: column;
+      width: 100%;
+   }
     
   
 
@@ -175,6 +194,11 @@
         color: white;
         position: relative;
         background-color: white;
+
+        @media @mobile {
+
+          width: 100%;
+       }
 
         img {
             height: 250px;
@@ -323,6 +347,12 @@
   height: 400px;
   background-color: lightslategrey;
 
+  @media @mobile {
+
+    margin-top: 10%;
+    font-size: 2rem;
+ }
+
 
 
   p {
@@ -331,6 +361,7 @@
     font-style: oblique;
     text-align: center;
     color: whitesmoke
+
 
   }
 
