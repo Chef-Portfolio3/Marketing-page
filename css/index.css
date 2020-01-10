@@ -202,10 +202,37 @@ p {
   display: none;
 }
 #wrapper {
-  margin-left: 3rem;
+  margin-left: 7.5rem;
 }
 .main-name-2 {
   display: none;
+}
+.about {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  font-size: 3rem;
+  color: green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about:hover {
+  background-size: 90%;
+  color: white;
+}
+/*Side bar*/
+.sidebar {
+  margin-top: -2rem;
+  width: 6rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
 }
 /*Hamburger menu*/
 .menu-burger {
@@ -220,13 +247,67 @@ p {
   margin-bottom: 0.6rem;
   margin-left: 2px;
 }
-/*Sidebar Menu naviation*/
+/*Social Icons*/
+.social-icons {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 25rem;
+}
+.social-icons .social-link {
+  font-size: 2rem;
+  color: #777;
+  transition: color 0.3s;
+}
+.social-icons .social-link:hover {
+  color: #de8886;
+}
+.logo-2 {
+  margin-top: -25rem;
+}
+.navigation-search {
+  position: relative;
+}
+/*Navigation search*/
+.navigation {
+  width: 17rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: -20rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  outline: none;
+  border: 2px solid green;
+  border-radius: 10rem;
+  transition: background-color 0.3s;
+}
+.navigation:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navigation-btn {
+  border: none;
+  background-color: transparent;
+  color: green;
+  font-size: 1.7rem;
+  position: absolute;
+  top: -19rem;
+  right: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+/* Menu naviation*/
 .main-nav-menu {
   position: fixed;
-  left: -26rem;
-  margin-top: 2.5rem;
-  width: 26rem;
-  height: 92%;
+  left: -18.5rem;
+  margin-top: -1.9rem;
+  width: 25.5rem;
+  height: 100%;
   background: url(../images/rice.jpg) gray;
   background-position: center;
   background-repeat: no-repeat;
@@ -237,7 +318,7 @@ p {
   justify-content: space-evenly;
   align-items: center;
   transition: left 0.8s cubic-bezier(1, 0, 0, 1);
-  z-index: 999;
+  z-index: 1;
 }
 .heading {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -246,7 +327,7 @@ p {
   font-size: 3.5rem;
 }
 ul {
-  margin-top: -80%;
+  margin-top: -40rem;
 }
 li {
   margin-bottom: 14%;
@@ -262,13 +343,30 @@ li {
 }
 .nav-link-menu {
   color: darkgreen;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
   text-decoration: none;
   letter-spacing: 0.1rem;
+  transition: color 0.5s;
+}
+.nav-link-menu:hover {
+  color: white;
+}
+.bar-1,
+.bar-3 {
+  transition: all 0.4s;
 }
 .checkbox:checked ~ .main-nav-menu {
   left: 3.5rem;
+}
+.checkbox:checked ~ .sidebar .bar-1 {
+  transform: rotate(-405deg) translate(-5px, 6px);
+}
+.checkbox:checked ~ .sidebar .bar-2 {
+  opacity: 0;
+}
+.checkbox:checked ~ .sidebar .bar-3 {
+  transform: rotate(405deg) translate(-5px, -6px);
 }
 /*Sidebar Menu naviation ENDED*/
 /*Logo*/
@@ -302,15 +400,17 @@ hr {
   flex-direction: column;
   color: white;
 }
-h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 600%;
+/*Page name*/
+h1 {
+  padding: -10rem 0 5rem 0;
+  font-size: 8rem;
   opacity: 0.5;
   text-decoration: underline;
+  margin-top: 20rem;
 }
-.Chefs-Recipes-1 {
-  font-size: 200%;
-  opacity: 0.5;
+.chefs {
+  font-size: 3rem;
+  opacity: 0.7;
 }
 .home-about {
   align-items: center;
@@ -318,7 +418,7 @@ h2 {
 .home-about .p1 {
   font-size: 2rem;
   text-align: center;
-  padding: 30% 15% 12% 15%;
+  padding: 8% 15% 12% 15%;
   font-family: 'Segoe UI';
   color: slategray;
 }
@@ -332,6 +432,27 @@ h2 {
 .home-about .p1 span:hover {
   background-size: 100% 88%;
 }
+.home-about-2 {
+  padding: 5vh;
+  background: gray url("../images/Prepear.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-color: #dbd5d5;
+  box-shadow: 5px 10px 8px #888888;
+  margin: 10%;
+  padding: 10%;
+  border-radius: 1rem;
+}
+.home-about-2 .p1-2 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 8% 15% 12% 15%;
+  font-family: 'Segoe UI';
+  color: white;
+  opacity: 100%;
+}
 /*Media query*/
 @media (min-width: 900px) {
   .menu-nav {
@@ -339,9 +460,6 @@ h2 {
   }
   #wrapper {
     margin-left: -3rem;
-  }
-  .label-2 {
-    display: none;
   }
   /*Navigation*/
   .account {
@@ -355,6 +473,37 @@ h2 {
   }
   .main-nav {
     display: flex;
+  }
+  .navigation-search {
+    position: relative;
+  }
+  /*Navigation search*/
+  .navigation {
+    width: 17rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    outline: none;
+    border: 2px solid green;
+    border-radius: 10rem;
+    transition: background-color 0.3s;
+  }
+  .navigation:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .navigation-btn {
+    border: none;
+    background-color: transparent;
+    color: green;
+    font-size: 1.7rem;
+    position: absolute;
+    margin: 1px;
+    cursor: pointer;
+    outline: none;
   }
   .nav-link {
     --spacing: 1em;
@@ -411,12 +560,17 @@ h2 {
     background: var(--text);
     border-color: var(--text);
   }
+  .nav-scrolled {
+    --text: #333;
+    --text-inverse: #f4f4f4;
+    --background: #f4f4f4;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  }
   /*Main header image and nav*/
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -427,6 +581,7 @@ h2 {
     /* <---- */
     --text-inverse: #333;
     /* <---- */
+    --background: transparent;
     transition: background 250ms ease-in;
     background: var(--background);
     color: var(--text);
@@ -437,7 +592,7 @@ h2 {
   }
   /*Image and page name*/
   .main-name {
-    padding: 20vh 0;
+    padding: 8vh 0;
     background-size: cover;
     background-blend-mode: multiply;
     color: white;
@@ -448,12 +603,14 @@ h2 {
   }
   /*Page name*/
   h1 {
-    font-size: 200px;
+    padding: -10rem 0 5rem 0;
+    font-size: 150px;
     opacity: 0.5;
+    text-decoration: underline;
   }
   .chefs {
     font-size: 4rem;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   /*Logo*/
   .logo {
