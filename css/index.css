@@ -890,6 +890,11 @@ h2 {
 .row .column .card img:hover {
   filter: grayscale(0);
 }
+@media (max-width:500px) {
+  .row .column .card img {
+    filter: grayscale(0);
+  }
+}
 .button {
   border: none;
   outline: 0;
